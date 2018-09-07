@@ -2,20 +2,26 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+class HelloWorld extends Component{
+customLink={
+backgroundColor :'blue'
+
+
+}
+render(){
+
+//React.createElement('a',{href: this.props.link}, this.props.linkText)
+//css not recomended way
+// const  customLink={
+//   backgroundColor:'yellow'
+// }
+
+return(
+  <a href={this.props.link } style={this.customLink}>{this.props.linkText}</a>
+)
+
 }
 
-export default App;
+}
+
+export default HelloWorld;
