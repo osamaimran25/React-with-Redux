@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Digitalclock from './DigitalClock';
+import AnalogClock from './AnalogClock';
+
 
 class Clock extends Component{
 
@@ -22,8 +24,10 @@ this.setState({currentTime: new Date().toLocaleString()})
 }
 render(){
 return(
+  <div>
 <Digitalclock time={this.state.currentTime }/>
-
+<AnalogClock time={this.state.currentTime }/>
+</div>
 )
 
 
